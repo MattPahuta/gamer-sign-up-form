@@ -1,0 +1,30 @@
+@layer reset {
+  /* Make the line-height more reader friendly */
+  body {
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* Set tighter line heights on headings & interactive elements */
+  h1,
+  h2,
+  h3,
+  h4,
+  button,
+  input,
+  label {
+    line-height: 1.1;
+  }
+
+  /* Inherit fonts for inputs and buttons */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+}
+
+:root {
+  --color-neutral-950: hsl(214, 37%, 4%);
+}
