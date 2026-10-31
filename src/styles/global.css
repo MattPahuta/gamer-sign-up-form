@@ -1,0 +1,108 @@
+@layer reset {
+  /* Make the line-height more reader friendly */
+  body {
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* Set tighter line heights on headings & interactive elements */
+  h1,
+  h2,
+  h3,
+  h4,
+  button,
+  input,
+  label {
+    line-height: 1.1;
+  }
+
+  /* Inherit fonts for inputs and buttons */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("../assets/fonts/jetbrains-mono/jetbrains-mono-variable.ttf")
+    format("truetype-variations");
+  font-optical-sizing: auto;
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Orbitron";
+  src: url("../assets/fonts/orbitron/orbitron-variable.ttf")
+    format("truetype-variations");
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    /* ─── Color: Brand ──────────────────────────────────────────
+    */
+
+    /* Neutral */
+    --color-neutral-950: hsl(214 37% 4%);
+    --color-neutral-900: hsl(210 39% 7%);
+    --color-neutral-800: hsl(211 30% 13%);
+    --color-neutral-700: hsl(211 22% 24%);
+    --color-neutral-600: hsl(210 18% 42%);
+    --color-neutral-500: hsl(211 14% 50%);
+    --color-neutral-400: hsl(211 13% 55%);
+    --color-neutral-300: hsl(211 18% 68%);
+    --color-neutral-100: hsl(208 49% 92%);
+    --color-neutral-50: hsl(204 60% 97%);
+    /* limes */
+    --color-lime-500: hsl(77 90% 59%);
+    --color-lime-700: hsl(77 67% 39%);
+    /* red     */
+    --color-red-400: hsl(4 100% 74%);
+    /* amber */
+    --color-amber-400: hsl(40 100% 65%);
+    /* navy */
+    --color-navy-950: hsl(214 60% 2%);
+    /* transparent */
+    --color-lime-alpha-60: hsl(77 90% 59% / 0.6);
+    --color-lime-alpha-40: hsl(77 90% 59% / 0.4);
+    --color-navy-alpha-80: hsl(214 60% 2% / 0.8);
+    --color-navy-alpha-60: hsl(214 60% 2% / 0.6);
+
+    /* Semantic variables */
+    --color-surface: var(--color-neutral-950);
+    --color-text-headline: var(--color-neutral-100);
+    --color-text-primary: var(--color-neutral-400);
+    --color-text-label: var(--color-neutral-300);
+    --color-text-hint: var(--color-neutral-400);
+
+    /* ─── Fonts: Brand ──────────────────────────────────────────
+    */
+    --font-sans: "Orbitron", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", monospace;
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+  }
+
+  body {
+    min-height: 100svh;
+    background-color: var(--color-surface);
+    color: var(--color-text-primary);
+    font-family: var(--font-mono);
+  }
+
+  h1 {
+    font-family: var(--font-sans);
+    font-size: 36px;
+    text-transform: uppercase;
+    color: var(--color-text-headline);
+  }
+}
