@@ -1,8 +1,31 @@
+@view-transition {
+  navigation: auto;
+}
+
+@layer reset, base;
+
 @layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
   /* Make the line-height more reader friendly */
   body {
     margin: 0;
     line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd {
+    margin: 0;
   }
 
   /* Set tighter line heights on headings & interactive elements */
@@ -22,6 +45,12 @@
   textarea,
   select {
     font: inherit;
+  }
+
+  [role="list"] {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -82,6 +111,8 @@
     --color-text-primary: var(--color-neutral-400);
     --color-text-label: var(--color-neutral-300);
     --color-text-hint: var(--color-neutral-400);
+    --color-accent: var(--color-lime-500);
+    --color-border: var(--color-neutral-700);
 
     /* ─── Fonts: Brand ──────────────────────────────────────────
     */
@@ -90,6 +121,16 @@
     --font-weight-regular: 400;
     --font-weight-bold: 700;
     --font-weight-extrabold: 800;
+    /* Text sizes - Orbitron, Extrabold */
+    --text-preset-1: 72px;
+    --text-preset-1-tablet: 40px;
+    --text-preset-1-mobile: 36px;
+    --text-preset-2: 24px;
+    --text-preset-3: 1rem;
+    /* Text sizes - JetBrains Mono */
+    --text-preset-4: 1rem;
+    --text-preset-5: 14px;
+    --text-preset-6: 12px;
   }
 
   body {
@@ -99,10 +140,5 @@
     font-family: var(--font-mono);
   }
 
-  h1 {
-    font-family: var(--font-sans);
-    font-size: 36px;
-    text-transform: uppercase;
-    color: var(--color-text-headline);
-  }
+
 }

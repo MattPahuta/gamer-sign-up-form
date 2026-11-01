@@ -1,11 +1,12 @@
 import "./styles/global.css";
-import "./App.css";
+import styles from "./App.module.css";
+
+import Header from "./components/Header/Header";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Join the Nexus</h1>
-      <p className="subtitle">Initialize your neoncore identity</p>
+    <div className={styles.appWrapper}>
+      <Header />
     </div>
   );
 }

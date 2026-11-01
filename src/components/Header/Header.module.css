@@ -1,0 +1,56 @@
+.header {
+  text-transform: uppercase;
+}
+
+.headerGrid {
+  display: grid;
+
+  grid-template-areas: 
+    "logo statusCount"
+    "titleBox titleBox"
+    "opIdStrip opIdStrip";
+}
+
+.titleBox {
+  margin-block-start: 2rem;
+  padding-block-end: 24px;
+  border-block-end: 1px solid var(--color-border);
+  grid-area: titleBox;
+}
+
+h1 {
+  margin-block-end: 12px;
+  font-family: var(--font-sans);
+  font-size: 2.25rem;
+  letter-spacing: 0.09rem;
+  color: var(--color-text-headline);
+
+  span {
+    margin-right: 0.5rem;
+    color: var(--color-accent);
+  }
+}
+
+.subTitle {
+  color: var(--color-neutral-300);
+} 
+
+.logo {
+  display: flex;
+  grid-area: logo;
+}
+
+.statusCount {
+  grid-area: statusCount;
+  justify-self: end;
+  align-self: center;
+  color: var(--color-neutral-400);
+}
+
+.operatorIdStrip {
+  margin-block-start: 1rem;
+  display: flex;
+  gap: 1rem;
+  grid-area: opIdStrip;
+  color: var(--color-neutral-400);
+}
